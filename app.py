@@ -24,6 +24,7 @@ def hello_world():
     - /chat?message=your_message
     - /history
     - /learn?topic=python_concept
+    - /nutshell
     '''
 
 @app.route('/chat')
@@ -80,6 +81,13 @@ def learn():
             'error': 'Topic not found',
             'available_topics': list(PYTHON_CONCEPTS.keys())
         })
+
+@app.route('/nutshell')
+def nutshell():
+
+    text = "Under Maintenance: No Availability"
+    
+    return text
 
 def provide_random_example():
     examples = [
